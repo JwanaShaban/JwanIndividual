@@ -2,9 +2,11 @@
   <div class="home_page">
   <div class="jumbotron text-center"> 
   <h1> Welcome to Homepage </h1>
+  <img v-if="user" src="@/assets/beat.png" width="272" height="80" class="image2"/>
   <p v-if="!user"> Please Log in to enter data! Also, make sure you click on “Symptoms” to be able to view the 
     symptoms of the keyword selected.</p>
     <br>
+    
     <img v-if="!user" src="@/assets/beat.png" width="320" height="100" class="image"/>
     <p v-if="!user">Thank you</p>
 
@@ -12,6 +14,48 @@
 </div> 
 
 <div class="jumbotron4 text-left" >
+  <div v-if="!user">
+  <h2><b>
+     What is Cardiomyopathy?</b>
+  </h2>
+  <br>
+  <p style="color:black; font-size:20px;"><b> Cardiomyopathy is a general term for diseases of the heart muscle, 
+    where the walls of the heart chambers have become stretched, thickened or stiff. 
+    This affects the heart's ability to pump blood around the body.</b></p>
+    <p style="color:black; font-size:16px;">The abnormal heart muscle seen in cardiomyopathy is not caused by 
+      blocked arteries in the heart (coronary artery disease), high blood pressure 
+      (hypertension), disease of the heart valves (valvular disease) or congenital heart disease.
+
+    Most types of cardiomyopathy are inherited and are seen in children and younger people.</p>
+    <div class="row">
+    <div class="column">
+    <img v-if="!user" src="@/assets/Cardio.png" width="272" height="300" class="image2"/>
+    </div>
+
+    <div class="column">
+    <img v-if="!user" src="@/assets/Cardio2.png" width="272" height="300" class="image2"/>
+    </div>
+
+    <div class="column">
+    <img v-if="!user" src="@/assets/Cardio3.png" width="272" height="270" class="image2"/>
+    </div>
+
+    </div>
+   <br>
+     <h2><b>
+     Treating cardiomyopathy</b>
+  </h2>
+  <br>
+    <p style="color:black; font-size:16px;">
+There's usually no cure for cardiomyopathy, but the treatments can be effective at
+ controlling symptoms and preventing complications. Some types of cardiomyopathy have specific 
+ treatments and early diagnosis is very important.
+Not everyone with cardiomyopathy will need treatment. 
+Some people only have a mild form of the condition they can control after making 
+a few lifestyle changes.
+    </p>
+
+  </div>
 <div class="tabs">
   <h2 v-if="user">Hi, {{user.displayName}}, please enter data</h2> 
   <h2 v-if="user"> <user-upload-data/> </h2>
@@ -157,6 +201,9 @@ export default {
   .image{
   margin-top: -3rem;
 }
+.image2{
+  margin-top: -1rem;
+}
   .drop
   {
     background-color: #ffffff;
@@ -169,12 +216,13 @@ export default {
   .tabs
   {
     display: inline-block;
-    margin-left: 30%;
+    margin-left: 35%;
     margin-right: auto;
     text-align: left;
     padding: 12px 20px;
     border-radius: 4px;
     color: black;
+ 
 
   }
 
@@ -183,5 +231,18 @@ export default {
   background-color: blue;
 }
 
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 </style>

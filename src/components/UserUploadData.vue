@@ -1,16 +1,18 @@
 <template>
-  <div id="uploadForm">
+  <div id="uploadForm" style="font-size:15px; text-align:center;">
     <form @submit="checkForm($event)">
       <div>
         Title:
         <input
           class="form-control input-sm"
           type="text"
+         
           v-model="submission.uploadTitle"
           name="uploadTitle"
           id="uploadTitle"
         />
       </div>
+      <br>
       <div>
         Details:
         <input
@@ -21,6 +23,7 @@
           id="uploadDetails"
         />
       </div>
+      <br>
       <div>
         CSV Data:
         <input
@@ -30,14 +33,16 @@
           @change="handleFileChange($event)"
         />
       </div>
+      <br>
       <div>
         Tags:
         <input type="text"  class="form-control input-sm" v-model="submission.tempTag" @keydown="addTag" />
       </div>
+      <br>
       <div v-for="tag in submission.tags" :key="tag" class="pill">
         <span @click="deleteTag(tag)">{{ tag }}</span>
       </div>
-      <input type="submit" class="btn btn-success" value="Add" />
+      <input type="submit" style="backgrount-color:navy;" class="btn btn-success"  value="Add" />
     </form>
   </div>
 </template>
@@ -180,12 +185,13 @@ export default {
 </script>
 <style>
 .pill {
+  
   display: inline-block;
   margin: 20px 10px 0 0;
   padding: 6px 12px;
   background: #eee;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 1px;
   font-weight: bold;
   color: #777;
@@ -193,6 +199,8 @@ export default {
 }
 .pill:hover {
   background: #ff6666;
+  
 }
+
 
 </style>

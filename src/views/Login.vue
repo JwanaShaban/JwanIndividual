@@ -12,7 +12,7 @@
 		<form role="form" >
 			<fieldset>
        
-				<h2>Please Sign In</h2>
+				<h2>Please Sign In or Register a new account</h2>
 				<hr class="colorgraph">
 				<div class="form-group">
                     <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" v-model="email">
@@ -28,7 +28,7 @@
 				<hr class="colorgraph">
 				<div class="row">
 					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <el-button type="submit" @click="login" class="btn btn-lg btn-success btn-block">
+                        <el-button type="submit" style="background-color:navy;" @click="login" class="btn btn-lg btn-success btn-block">
                           Login
                         </el-button>
 					</div>
@@ -115,7 +115,7 @@ export default {
 
 <style scoped>
   .jumbotron {
-    background-color: #5f75f1;
+    background-color: #ffffff;
     color: #fff;
     padding: 30px 25px;
     font-family: Montserrat, sans-serif;
