@@ -1,4 +1,4 @@
-# style-test
+# vue-testing
 
 ## Project setup
 ```
@@ -15,19 +15,14 @@ npm run serve
 npm run build
 ```
 
+### Run your unit tests
+```
+npm run test:unit
+```
+
 ### Lints and fixes files
 ```
 npm run lint
-```
-### JACK INSTALLATIONS
-```
-npm install firestore-export-import
-inpm install papaparse
-npm i form-data
-npm install vue3-apexcharts
-npm install emailjs-com --save
-
-
 ```
 
 ### Customize configuration
