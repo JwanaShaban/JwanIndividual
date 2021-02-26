@@ -5,7 +5,7 @@
   <p v-if="!user"> Please Log in to enter data! Also, make sure you click on “Symptoms” to be able to view the 
     symptoms of the keyword selected.</p>
     <br>
-    <img src="@/assets/beat.png" width="320" height="100" class="image"/>
+    <img v-if="!user" src="@/assets/beat.png" width="320" height="100" class="image"/>
     <p v-if="!user">Thank you</p>
 
 
@@ -21,7 +21,7 @@
 <br>
 
   <div class="jumbotron2 text-center">
-  <h1>Saerch keywords </h1> 
+  <h1>Search keywords </h1> 
   <p>Please select one keyword to search</p> 
    <div class="input-container" >
       <select v-model="selected">
@@ -32,7 +32,7 @@
         <option>TPM1</option>
       </select>
       <span>Selected: {{selected}}</span>
-      <button class="btn btn-success" @click="populateDiseaseList()">SEARCH </button>
+      <button class="btn btn-success" Style="color:white; background-color:navy;" @click="populateDiseaseList()" >SEARCH </button>
     </div>
       <SearchList  v-if="results && internalResults && somethingEntered == true"
       :results="results"
