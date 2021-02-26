@@ -1,6 +1,7 @@
 <template>
 <div>
-  <div class="jumbotron text-left">
+  <div class="jumbotron text-center">
+<img src="@/assets/heart3.png" width="400" height="100" class="image"/>
     <h1> Uploads </h1>
      <h2> Welcome to the Graph page</h2>
 
@@ -75,5 +76,9 @@ export default {
     border-style: solid;
   border-color: #121172;
   }
+
+  .image{
+  margin-top: -3rem;
+}
 </style>
 

@@ -2,16 +2,16 @@
   <div class="login">
     <div class="jumbotron text-center">
      
-<img v-bind:src="'/assets/EveryPhysicalDartfrog-size_restricted.gif'">
+     <img src="@/assets/heart3.png" width="400" height="100" class="image"/>
 
   </div>
   <div class="text-center">
   <div class="container">
-      <div class="row" style="margin-top:20px">
+      <div class="row" style="margin-top:7px">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
 		<form role="form" >
 			<fieldset>
-        <img scr="EveryPhysicalDartfrog-size_restricted.gif">
+       
 				<h2>Please Sign In</h2>
 				<hr class="colorgraph">
 				<div class="form-group">
@@ -66,6 +66,7 @@ import { firebaseAuthentication } from "@/firebase/database";
 import { useRouter } from "vue-router";
 
 
+
 export default {
   name: 'Login',
   emits: ["login-clicked"],
@@ -116,8 +117,12 @@ export default {
   .jumbotron {
     background-color: #5f75f1;
     color: #fff;
-    padding: 50px 25px;
+    padding: 30px 25px;
     font-family: Montserrat, sans-serif;
+  }
+  .jumbotron-img
+  {
+    margin: 10rem;
   }
 
     .jumbotron3 {
@@ -149,6 +154,11 @@ footer {
   padding: 5px;
   text-align: center;
   color: white;
+  margin-top: 2rem;
+}
+
+.image{
+  margin-top: 3rem;
 }
 
 </style>

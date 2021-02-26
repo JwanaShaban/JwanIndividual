@@ -1,7 +1,12 @@
 <template>
   <div class="home_page">
-  <div class="jumbotron text-left"> 
+  <div class="jumbotron text-center"> 
   <h1> Welcome to Homepage </h1>
+  <p v-if="!user"> Please Log in to enter data! Also, make sure you click on “Symptoms” to be able to view the 
+    symptoms of the keyword selected.</p>
+    <br>
+    <img src="@/assets/beat.png" width="320" height="100" class="image"/>
+    <p v-if="!user">Thank you</p>
 
 
 </div> 
@@ -149,7 +154,9 @@ export default {
     font-family: Montserrat, sans-serif;
   }
 
-
+  .image{
+  margin-top: -3rem;
+}
   .drop
   {
     background-color: #ffffff;
