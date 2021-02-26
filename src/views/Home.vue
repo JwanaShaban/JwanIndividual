@@ -27,7 +27,7 @@
       (hypertension), disease of the heart valves (valvular disease) or congenital heart disease.
 
     Most types of cardiomyopathy are inherited and are seen in children and younger people.</p>
-    <div class="row">
+    <div class="row" id="wrapper">
     <div class="column">
     <img v-if="!user" src="@/assets/Cardio.png" width="272" height="300" class="image2"/>
     </div>
@@ -245,4 +245,11 @@ export default {
   display: table;
 }
 
+
+
+#wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
 </style>
